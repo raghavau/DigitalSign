@@ -7,6 +7,7 @@
     <body>
         <h1>Digital Signature Mobile App.</h1>
         <div class="container">
+            <button id="btnCaptureSign" class="btn btn-primary" type="button">Capture Sign</button>
             <button id="btnCapture" class="btn btn-primary" type="button">Capture Sign</button>
         </div>
     </body>
@@ -15,7 +16,10 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("#btnCapture").click(function(){
-            window.location.href = 'Capture2.html';
+            window.location.href = 'Capture.html';
+        });
+        $("#btnCaptureSign").click(function(){
+            window.location.href = 'CaptureSign.html';
         });
     });
 </script>

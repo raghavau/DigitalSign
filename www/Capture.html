@@ -58,10 +58,10 @@
 			{
 				if(confirm("This will write a file using the example image_save.php. Is that cool with you?"))
 				{
+                    /*dataType: "json",*/
                     $.ajax({
                         type: 'POST',
                         url: 'http://61.0.225.169/SampleWebApi/api/UploadImage',
-                        dataType: "json",
                         data: { ImageData: imageData },
                         success: function (result) {
                             alert('Data Saved Successfully.');

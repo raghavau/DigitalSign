@@ -57,7 +57,6 @@
 		{
             $("#test").data("jqScribble").save(function(imageData)
 			{
-                $("#txtimgstring").html(imageData);
 				if(confirm("This will write a file using the example image_save.php. Is that cool with you?"))
 				{
                     /*dataType: "json",*/
@@ -67,7 +66,8 @@
                         data: { ImageData: imageData },
                         success: function (result) {
                             alert('Data Saved Successfully.');
-                            window.location.href = 'Capture.html';
+                            $("#txtimgstring").html(imageData);
+                            //window.location.href = 'Capture.html';
                         },
                         error: function (xhr, status, error) {
                             alert('Error occurred while saving the data.\n\r' + xhr.responseText);

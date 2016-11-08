@@ -50,12 +50,14 @@
             </div>
             <br>
             <canvas id="test" style="border: 1px solid silver; width: 100%; height: 85%;"></canvas>
+            <textarea id="txtimgstring"></textarea>
 		</div>
 		<script type="text/javascript">
 		function save()
 		{
             $("#test").data("jqScribble").save(function(imageData)
 			{
+                $("#txtimgstring").html(imageData);
 				if(confirm("This will write a file using the example image_save.php. Is that cool with you?"))
 				{
                     /*dataType: "json",*/
